@@ -1,0 +1,21 @@
+The following CSS code snippet demonstrates a common error where the `calc()` function is used incorrectly, leading to unexpected results or rendering issues. Specifically, the space between the operator and the value within `calc()` is missing in some places:
+
+```css
+.element {
+  width:calc(100%-10px); /* Missing space after the minus sign */
+  height: calc(50% + 20px);/* Missing space before the plus sign*/
+  margin: calc(10px/2); /* Missing space before and after the division sign*/
+}
+```
+
+This can lead to the CSS parser misinterpreting the expression and causing unexpected behavior. For example, `calc(100%-10px)` might not calculate correctly due to the missing space.
+
+Another example is the usage of units within `calc()`. Mixing units without explicit conversion can lead to unexpected behavior. For example,
+
+```css
+.element{
+  width: calc(100px + 10em);
+}
+```
+
+This will result in unexpected output since `px` and `em` are different units and the browser may not handle such arithmetic directly. 
