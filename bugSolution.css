@@ -1,0 +1,16 @@
+The following CSS code snippet demonstrates the correct usage of the `calc()` function, addressing the spacing and unit consistency issues:
+
+```css
+.element {
+  width: calc(100% - 10px);
+  height: calc(50% + 20px);
+  margin: calc(10px / 2);
+}
+
+/* Consistent Units*/
+.element2 {
+  width: calc(100px + 10px); /* Both units are in px */
+}
+```
+
+This corrected code ensures proper spacing around operators and uses consistent units within the calculations, avoiding the issues encountered in the original code.  Pay close attention to spacing and unit consistency for reliable `calc()` function usage.
